@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', ui-sans-serif, system-ui;
+}
+
+/* Subtle starfield gradient background */
+body {
+  background:
+    radial-gradient(1200px 800px at -10% -10%, rgba(16, 185, 129, 0.06), transparent 60%),
+    radial-gradient(1000px 600px at 110% 0%, rgba(14, 165, 233, 0.06), transparent 60%),
+    radial-gradient(800px 600px at 50% 120%, rgba(168, 85, 247, 0.05), transparent 60%), #0b1220;
+}
+
+/* Reusable glass card */
+.glass {
+  @apply bg-slate-900/60 border border-white/10 backdrop-blur-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.6)] rounded-2xl;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium transition outline-none;
+}
+.btn-ghost {
+  @apply border border-white/10 hover:bg-white/5;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #10b981 0%, #22c55e 40%, #06b6d4 100%);
+  @apply text-white shadow-[0_8px_24px_-8px_rgba(16,185,129,0.6)] hover:brightness-110;
+}
+
+/* Tiny entrance animation */
+.fade-up {
+  animation: fadeUp 420ms ease-out both;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar base */
+.progress-track {
+  @apply h-2 w-full rounded-full bg-white/10 overflow-hidden;
+}
+.progress-fill {
+  @apply h-2 rounded-full;
+  background: linear-gradient(90deg, #22c55e, #06b6d4);
+}
