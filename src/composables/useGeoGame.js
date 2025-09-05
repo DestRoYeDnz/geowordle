@@ -54,12 +54,14 @@ export default function useGeoGame(countries) {
   function resetGameFromSeed(seed) {
     const idx = seededIndex(seed, countries.length)
     target.value = countries[idx]
+    console.log(countries[idx])
     guesses.value = []
   }
 
   function resetGame() {
     const idx = Math.floor(Math.random() * countries.length)
     target.value = countries[idx]
+    console.log(countries[idx])
     guesses.value = []
   }
 

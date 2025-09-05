@@ -7,6 +7,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
     <title>GeoWordle</title>
+
+    <script>
+      (function(){
+        window.rudderanalytics = window.rudderanalytics || [];
+        var methods = ["load","page","track","identify","group","alias","ready","reset","getAnonymousId","setAnonymousId"];
+        for (var i = 0; i < methods.length; i++) {
+          var method = methods[i];
+          window.rudderanalytics[method] = (function(methodName){
+            return function(){
+              window.rudderanalytics.push([methodName].concat(Array.prototype.slice.call(arguments)));
+            };
+          })(method);
+        }
+        // Load the SDK
+        var r = document.createElement("script");
+        r.src = "https://cdn.rudderlabs.com/v1/rudder-analytics.min.js";
+        r.async = true;
+        r.onload = function(){
+          // Auto page call once loaded (optional—our app also calls page('home'))
+          window.rudderanalytics.page();
+        };
+        document.head.appendChild(r);
+    
+        // Initialize with YOUR credentials:
+        window.rudderanalytics.load("329wC04CpZbh3ozq49E6hgaJ6Cn", "https://dekodebresdfkz.dataplane.rudderstack.com");
+      })();
+    </script>
   </head>
   <body class="bg-slate-950 text-slate-100">
     <div id="app"></div>

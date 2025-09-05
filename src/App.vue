@@ -4,10 +4,10 @@
 
     <main class="mx-auto w-full max-w-7xl px-5 py-8 md:py-12">
       <section class="glass p-5 md:p-6 fade-up">
-        <p class="text-sm text-slate-300 leading-relaxed">
+        <p class="text-sm text-slate-6+00 leading-relaxed">
           Guess today’s country. After each guess, you’ll see
-          <span class="font-semibold text-slate-100">distance</span> and
-          <span class="font-semibold text-slate-100">direction</span> to the target.
+          <span class="font-semibold text-slate-500">distance</span> and
+          <span class="font-semibold text-slate-500">direction</span> to the target.
           Use deduction to zero in within <span class="font-semibold">8 guesses</span>.
         </p>
       </section>
@@ -25,7 +25,7 @@
         <div class="glass p-4 md:p-5">
           <h3 class="text-sm font-semibold tracking-wide text-slate-300 mb-3">Directional Hint</h3>
           <MapHint v-if="guesses.length" :latest="guesses[0]" :target="target" />
-          <div v-else class="text-sm text-slate-400">Make a guess to see hints.</div>
+          <div v-else class="text-sm text-slate-600">Make a guess to see hints.</div>
         </div>
       </section>
 
